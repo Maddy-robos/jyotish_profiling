@@ -1,0 +1,9 @@
+.chart-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Adjust for North or South Indian style */
+}
+.cell {
+    border: 1px solid #000;
+    padding: 10px;
+}

@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>{{ name }}'s Vedic Astrology Charts</title>
+</head>
+<body>
+    <h1>{{ name }}'s Vedic Astrology Charts</h1>
+
+    <h2>D1 Chart (Rasi Chart)</h2>
+    <table>
+        <tr>
+            <th>Planet</th>
+            <th>Sign</th>
+            <th>House</th>
+        </tr>
+        {% for planet, details in d1_chart.items() %}
+        <tr>
+            <td>{{ planet }}</td>
+            <td>{{ details['sign'] }}</td>
+            <td>{{ details['house'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>D9 Chart (Navamsa Chart)</h2>
+    <table>
+        <tr>
+            <th>Planet</th>
+            <th>Sign</th>
+            <th>House</th>
+        </tr>
+        {% for planet, details in d9_chart.items() %}
+        <tr>
+            <td>{{ planet }}</td>
+            <td>{{ details['sign'] }}</td>
+            <td>{{ details['house'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Chara Karakas</h2>
+    <ul>
+        {% for karaka, planet in chara_karakas.items() %}
+        <li>{{ karaka }}: {{ planet }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
